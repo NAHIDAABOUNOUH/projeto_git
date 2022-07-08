@@ -1,0 +1,47 @@
+    #introducao {
+      width: 100%;
+      height: 20%;
+      background-color: yellow;
+
+    }
+
+    #conteudo-principal {
+      width: 100%;
+      height: 60%;
+      background-color: violet;
+    }
+
+    #rodape {
+      width: 100%;
+      height: 20%;
+      background-color: yellowgreen;
+    }
+
+    figure {
+
+      float: left;
+    }
+
+    div ul li {
+      list-style-type: none;
+      float: left;
+      margin: 2%;
+    }
+
+    div ul li a:focus {
+      border: 2px dotted blue;
+      outline: transparent;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      clear: both;
+      text-align: center;
+    }
+
+
+    .destaque {
+      color: green;
+      font-weight: bold;
+
+    }

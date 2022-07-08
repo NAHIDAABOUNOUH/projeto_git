@@ -1,0 +1,49 @@
+Módulo HTML
+
+Inserindo imagem, áudio e vídeo numa página web.
+
+O HTML5 introduz o suporte de mídia embutido por meio dos elementos <audio> e <video>, oferecendo a possibilidade de incorporar facilmente mídia em documentos HTML.
+
+Incorporando mídia.
+
+Incorporar mídia em documentos HTML é simples.
+
+Exemplo para inserir vídeos:
+
+<video src="meu-video.mp4" controls>
+  Seu navegador não suporta o elemento video.
+</video>
+Esse exemplo reproduz um arquivo de vídeo  (meu-video.mp4), com controles de reprodução. O atributo 'src' também pode receber uma url com o vídeo desejado.
+
+Aqui há um exemplo de áudio incorporado em um documento HTML
+<audio src="meu-audio.mp3" controls>
+<p>Seu navegador não suporta o elemento audio.</p>
+</audio>
+O atributo src pode ser a URL do arquivo de áudio ou o caminho do arquivo no sistema local.
+
+<audio src="audio.ogg" controls autoplay loop>
+<p>Seu navegador não suporta o elemento audio </p>
+</audio>
+
+Esse exemplo de código usa atributos do elemento <audio>:
+controls : Mostra os controles padrão para o áudio na página;
+autoplay : Faz com que o áudio reproduza automaticamente;
+loop : Faz com que o áudio repita automaticamente;
+
+<audio src="audio.mp3" preload="auto" controls></audio>
+O atributo preload é usado em elementos audio para carregar arquivos grandes. Ele pode assumir 3 valores:
+"none" não carrega o arquivo;
+"auto" carrega o arquivo;
+"metadata" carrega apenas os meta dados do arquivo.
+
+Imagens
+
+Para imagens utilizamos a tag <img> e indicamos o local do arquivo a ser carregado, além disso essa tag não possui fechamento.
+O atributo que usamos para indicar o arquivo é também o src: <img src="minha-imagem.jpg">
+Outro atributo essencial é o alt, que exibe um texto alternativo caso a imagem não seja carregada ou a pessoa não consiga enxergá-la:
+<img src="minha-imagem.jpg" alt="Uma pessoa com um livro nas mãos">
+Com o atributo width podemos informar a largura da imagem e com o atributo height podemos indicar a sua altura:
+<img src="logo.png" width="135" height="75" alt="Logo Lendo e Aprendendo">
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!

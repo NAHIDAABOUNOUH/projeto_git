@@ -1,0 +1,10 @@
+Nesse encontro aprendemos o que é WAI-ARIA e como utilizar CSS para estilizar nossos documentos HTML.
+Para continuar os estudos sobre CSS, seguem links com mais informações e código das cores:
+
+https://developer.mozilla.org/pt-BR/docs/Learn/CSS/First_steps
+
+https://celke.com.br/artigo/tabela-de-cores-html-nome-hexadecimal-rgb
+
+E não se esqueçam,
+
+continuem desenvolvendo!

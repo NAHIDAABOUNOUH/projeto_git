@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Exemplo 07 de HTML Acessível</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <h1 id="titulo-de-introducao">Seja bem-vindo(a) ao nosso sétimo exemplo de HTML acessível</h1>
+  <p>Hoje iremos continuar aprendendo sobre formulários em nosso documento HTML.</p>
+
+  <h2>Exemplo de formulário</h2>
+  <form method="GET" action="cadastro.php">
+    <fieldset>
+      <legend>Dados pessoais</legend>
+      <label for="nome">Digite seu nome completo: </label>
+      <input type="text" name="txt-nome" id="nome">
+      <label for="email">Informe seu e-mail: </label>
+      <input type="email" name="txt-email" id="email">
+      <label for="telefone">Informe seu número de telefone</label>
+      <input type="tel" name="telefone" id="telefone">
+    </fieldset>
+    <fieldset>
+      <legend>Dados da mensagem</legend>
+      <label for="assunto">Informe o assunto da mensagem:</label>
+      <input type="text" name="assunto" id="assunto">
+      <label for="mensagem">Escreva sua mensagem:</label>
+      <textarea cols="100" rows="100" name="mensagem" id="mensagem"></textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Dados de endereço</legend>
+      <label for="estados">Selecione seu estado:</label>
+      <select name="estados" id="estados">
+        <option value="mg">Minas Gerais</option>
+        <option value="sp">São Paulo</option>
+
+
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Selecione seu sexo:</legend>
+      <input type="radio" name="sexo" value="f" id="feminino">
+      <label for="feminino">Feminino</label>
+
+      <input type="radio" name="sexo" value="m" id="masculino">
+      <label for="masculino">Masculino</label>
+    </fieldset>
+
+
+    <button type="submit" name="btn-enviar">Enviar dados</button>
+  </form>
+
+
+</body>
+
+</html>

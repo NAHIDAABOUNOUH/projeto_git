@@ -1,0 +1,112 @@
+Módulo - JavaScript
+
+Estrutura de controle - Repetição
+
+Estruturas de repetição (while, do while, for)
+
+Estruturas de Repetição ENQUANTO-FAÇA e FAÇA-ENQUANTO (while, do while)
+
+Vamos ver como podemos utilizar essas estruturas em javascript.
+
+As estruturas de repetição, também chamadas de loops, são muito utilizadas no mundo da programação.
+Elas servem para realizar uma rotina inúmeras vezes. Essa repetição pode ser finita ou infinita (looping infinito). Deve-se tomar muito cuidado com os comandos de repetição, pois executando um looping infinito você pode travar seu computador.
+
+Estrutura de repetição while
+Os passos dentro deste bloco são repetidos enquanto a expressão booleana resultar VERDADEIRA.
+
+Vejamos como ficaria o código desta estrutura:
+
+while (<expressão booleana>) {
+<instruções a serem executadas enquanto a expressão booleana resultar em VERDADEIRO>
+}
+
+Também chamamos esta estrutura de repetição de loop pré-testado, pois a expressão booleana é verificada antes da primeira execução. Se inicialmente ela já resultar em FALSO, as instruções que estão dentro do bloco não são executadas nenhuma vez.
+
+Vamos fazer um script para somar valores até o usuário digitar o valor 0. Ou seja, vamos somar todos os valores que o usuário digitar, porém quando ele digitar 0 o “loop” acaba, a cada iteração do loop vamos apresentar o resultado atual da soma.
+
+<script> //SomaEnquantoValorDiferenteDe0
+var valorDigitado;
+var soma;
+//inicio
+soma = 0;
+valorDigitado = parseInt(prompt("Digite um valor para a soma: "));
+while (valorDigitado != 0) {
+soma = soma + valorDigitado;
+alert("Total: "+ soma);
+valorDigitado = parseInt(prompt("Digite um valor para a soma: "));
+
+}
+alert ("Resultado: "+ soma);
+</script> //fimalgoritmo
+
+Estrutura de repetição do while
+
+Lembra que a estrutura while é conhecida como loop pré-testado? Então, a estrutura FAÇA-ENQUANTO (do while aqui no javascript) é o contrário. Ela é um LOOP pós-testado. Isso significa que a verificação para repetir o LOOP é testada no final do bloco.
+
+Este é o código com do while:
+do {
+<instruções a serem executadas repetidamente enquanto a expressão booleana for VERDADEIRA>
+}
+while (<expressão booleana>);
+
+Enquanto na estrutura while o bloco do LOOP pode não ser executado nenhuma vez, na estrutura do while o bloco é executado pelo menos uma vez.
+
+Que tal fazer o mesmo exercício que fizemos acima com a estrutura while,
+mas desta vez utilizando a estrutura do while? Vamos ver como ficaria?
+
+<script> // SomaEnquantoValorDiferenteDe0
+var valorDigitado;
+var soma;
+
+//inicio
+soma = 0;
+
+do {
+valorDigitado = parseInt(prompt("Digite um valor para a soma: "));
+soma = soma + valorDigitado;
+alert("Total: "+ soma);
+}
+while(valorDigitado != 0);
+</script> //fim script
+
+Algumas diferenças ...
+Se você prestar atenção, vai perceber que na estrutura while tivemos que repetir uma parte do código antes do LOOP e dentro do LOOP. Repetimos a seguinte parte:
+valorDigitado = parseInt(prompt("Digite um valor para a soma: "));
+Isso aconteceu porque a estrutura while é pré-testada. Não daria pra testar se o usuário digitou o valor 0 se ele ainda não tivesse digitado valor nenhum.
+Na estrutura do while não precisamos escrever essas duas linhas duas vezes, pois ela é pós-testada.
+O resultado deste algoritmo é o mesmo do anterior.
+Percebemos que é possível utilizar qualquer uma das duas estruturas para implementar LOOPs, porém cada uma é mais apropriada dependendo do
+problema. Neste problema em particular, a estrutura do while se mostrou mais apropriada, Uma vez que nesta estrutura não é necessário repetir um pedaço do código.
+A decisão de qual estrutura utilizar entre as duas, sempre será tomada observando a diferença entre PRÉ-TESTADA e PÓS-TESTADA, o melhor para resolver o problema proposto.
+
+Repetição com for (PARA-FAÇA)
+
+A sintaxe é a seguinte:
+
+for(<contador>; <condição valor final>; <incremento>) {
+instruções a serem executadas repetidamente até a <contador> atingir o <condição valor final>
+}
+
+A inicialização do contador é realizado com o informado na declaração da estrutura. A condição para executar a iteração é que o valor da
+variável contadora não tenha atingido o <condição valor final>. E ao final de cada iteração, o valor da variável contadora é incrementado em o valor declarado como incremento.
+
+Vamos resolver um problema de somar todos os números de 1 a 100 com a estrutura for:
+
+<script> //soma de 1 a 100 com for
+var contador;
+var soma;
+
+//Inicio
+soma = 0;
+for(contador=1; contador<=100; contador++) {
+soma = soma + contador;
+}
+alert ("A soma de 1 a 100 é: "+ soma);
+</script> //fim script
+
+Aprenda muito bem os LOOPs! As estruturas de repetição são muito utilizadas em desenvolvimento de softwares. Entender como elas funcionam é muito
+importante para resolver problemas que precisam executar tarefas repetidas vezes. Acredite, existem muitos!
+Com essas estruturas podemos controlar o fluxo do nosso script!
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!

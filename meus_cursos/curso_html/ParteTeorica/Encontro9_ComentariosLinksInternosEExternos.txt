@@ -1,0 +1,28 @@
+Módulo HTML
+
+Comentários, links internos e externos.
+
+Comentários
+
+Comentário é para que possamos inserir algo no código e deixar determinada instrução mais bem documentada, explicando alguma coisa, sem que ela seja identificada pelo navegador como código html.
+Quando queremos inserir um comentário no código html, por exemplo o significado de alguma tag, inserimos o que queremos dizer entre as instruções <!-- e -->, conforme a seguir:
+
+<!-- a tag a seguir é para fazer um parágrafo -->
+<p>Meu texto</p>
+
+Assim, a frase "a tag a seguir é para fazer um parágrafo" não será exibida no navegador, ficando acessível somente no código fonte.
+
+Links
+
+Os links servem para nos "lincar" com outro conteúdo, seja na mesma página ou em outro documento.
+Para isso utilizamos a tag de âncora <a>.
+A tag <a> utiliza o atributo href para indicarmos o local que queremos ir:
+Com uma url para ir para endereço externo: <a href="http://google.com.br">Abrir o site da Google</a>
+Com um identificador para irmos para outra parte da página que estamos: <a href="#estante">Ir para estante de livros</a>
+Nesse caso, a tag que está a estante precisa ter o identificador com o nome referenciado "estante", para isso utilizamos o atributo id, que precisa ser único em toda a página.
+<h2 id="estante">Estante de livros</h2>
+Ao clicar no link com url da Google, seremos encaminhados para o site da Google. Ao clicarmos no link com o id da estante, simplesmente saltamos para o cabeçalho da estante, o qual possui o bookmark, o id="estante".
+Assim, o que está como valor do atributo "href" indica o endereço para onde queremos ir, e o texto que está como conteúdo da tag <a> é o rótulo do link que queremos que seja exibido para o usuário.
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!

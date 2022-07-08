@@ -1,0 +1,81 @@
+Módulo - JavaScript
+
+Variáveis e tipos de dados.
+
+JavaScript é a linguagem de programação mais popular no desenvolvimento Web. Suportada por todos os
+navegadores, a linguagem é responsável por praticamente qualquer tipo de dinamismo que queiramos em nossas páginas.
+Se usarmos todo o poder que ela tem para oferecer, podemos chegar a resultados impressionantes. Excelentes
+exemplos disso são aplicações Web complexas como Gmail, Google Maps e Google Docs.
+
+Para inserirmos um código JavaScript em uma página, é necessário utilizar a tag <script>:
+<script>
+//todo o algoritmo (código) vem aqui
+</script>
+
+Alguns navegadores dão suporte a entrada de comandos pelo console. Por exemplo, no Google Chrome o
+console pode ser acessado por meio do atalho Control + Shift + C; no Firefox, pelo atalho Control + Shift+ K.
+O console é muito bom para inserirmos algum código e recebermos o resultado de forma imediata. Se você digitar:
+5 + 5 e der enter, rapidamente aparecerá o resultado 10.
+
+Vamos ver como é a sintaxe básica para declarar variáveis em javascript:
+var nome = "Juliano";
+alert(nome);
+
+Nesse exemplo armazenamos um texto (string) na variável nome e depois imprimimos na tela com a função alert() do javascript.
+No JavaScript, também é possível alterar o valor da variável a qualquer momento, inclusive por valores de tipos diferentes, o que em algumas outras linguagens não é possível.
+Por exemplo, poderíamos fazer assim:
+var numero = "primeiro";
+alert(numero);
+numero = 1;
+alert(numero);
+Iniciamos a variável número com um texto (string) e depois mudamos o seu tipo para um valor numérico.
+
+O JavaScript dá suporte aos tipos String (letras e palavras),
+Number (números inteiros, decimais),
+Boolean (verdadeiro ou falso)
+arrays (coleção de variáveis do mesmo tipo),
+entre outros.
+
+var texto = "Uma String deve ser envolvida em aspas simples ou duplas.";
+var numero = 2012;
+var verdade = true;
+
+Para inserirmos nosso primeiro script numa página html, faríamos assim:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<title>Minha primeira página com javascript</title>
+</head>
+<body>
+<h1>Teste com javascript!</h1>
+<script>
+var nome = "Juliano";
+alert(nome);
+</script>
+</body>
+</html>
+
+Além da função alert que exibe uma mensagem para usuário, na qual o usuário só pode clicar no botão ok para dizer que compreendeu a informação,
+existem outras formas de comunicação com o usuário através de mensagens.
+O alert é apenas para observação:
+alert(mensagem);
+Ex.:
+alert ("Certifique-se de que as informações estão corretas");
+
+Também podemos exibir uma mensagem para o usuário via caixa de texto:
+var minhaVariavel = prompt ("Minha mensagem", "Meu texto");
+Onde:
+minhaVariavel é a variável que vai receber a informação digitada pelo usuário;
+Minha mensagem é a mensagem que vai aparecer como Label da caixa de input.
+Meu texto é um texto, opcional, que aparecerá na linha de digitação do usuário, se for um campo para digitar o nome, o campo já poderá estar preenchido com algum nome de exemplo.
+O exemplo abaixo só tem o texto de rótulo:
+Ex.
+var nome = prompt("Informe seu nome:");
+alert("Seu nome é "+nome);
+
+Conclusão:
+
+vimos que é bem simples inserirmos código javascript em uma página web. Com javascript podemos ir muito mais além!
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!

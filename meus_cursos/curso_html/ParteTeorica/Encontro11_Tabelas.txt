@@ -1,0 +1,28 @@
+Módulo HTML Acessível
+
+Tabelas
+
+Para apresentar uma tabela utilizamos a tag <table>.
+Dentro dessa tag, porém, temos de utilizar mais três outras, pelo menos:
+<tr> para indicar uma linha da tabela;
+<th> para indicar o título da coluna da tabela;
+td para indicar uma célula da tabela.
+A estrutura básica de uma tabela é:
+
+<table>
+<tr>
+<th>Livro</th> <th>Autor</th> <th>Categoria</th>
+</tr>
+<tr>
+<td>O tigre de Sharpe</td> <td>Bernard Cornwell</td> <td>Aventura</td>
+</tr>
+<tr>
+<td>Querido John</td> <td>Nicholas Sparks</td> <td>Romance</td>
+</tr>
+<tr>
+<td>Se houver o amanhã</td> <td>Sidney Sheldon</td> <td>Ficção</td>
+</tr>
+</table>
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!

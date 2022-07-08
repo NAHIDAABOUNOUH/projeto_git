@@ -1,0 +1,36 @@
+Módulo - Java Script
+
+Vetores (Arrays)
+
+Para a criação de um vetor (array) em javascript, podemos fazer assim:
+var nomes = ["Ailton", "Fabiano", "Gilberto", "Gilmar", "Marcos", "Thiago"];
+Podemos acessar suas posições utilizando os índices:
+alert(nomes[1]);
+alert(nomes[2]);
+Porém, qual o nome que será exibido ao chamarmos o array na posição com o número 3?
+alert(nomes[3]);
+Aparentemente, com base nos vetores que começam em 1, seria o nome Gilberto. Entretanto, o java script começa seus arrays na posição 0. Assim:
+nomes[1]; //Fabiano
+nomes[2]; //Gilberto
+nomes[3]; //Gilmar
+
+Para exibirmos o primeiro nome "Ailton", devemos acessar o array na posição 0:
+nomes[0]; //Ailton
+Dessa forma, nosso array tem 6 posições, com os índices de 0 a 5.
+Para sabermos o tamanho de nosso array, podemos acessar a propriedade length desse objeto:
+alert(nomes.length); //6
+
+Utilizando a estrutura de repetição for, que vimos em aula, podemos passar por cada posição, conforme a seguir:
+
+<script>
+var nomes = ["Ailton", "Fabiano", "Gilberto", "Gilmar", "Marcos", "Thiago"];
+var contador;
+for(contador = 0; contador < nomes.length; contador++){
+alert(nomes[contador]);
+}
+</script>
+
+Então, pratique bastante a utilização de arrays com estruturas de repetição, porque essa combinação é muito importante em programação!
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!

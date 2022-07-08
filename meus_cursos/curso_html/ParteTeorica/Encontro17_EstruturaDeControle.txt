@@ -1,0 +1,197 @@
+Módulo 3 - JavaScript
+
+Estrutura de Controle
+
+Existem três estruturas básicas de controle:
+1. Seqüência simples
+2. Seleção / decisão
+3. Repetição
+
+As ações são efetuadas com base nestas três estruturas.
+
+Veremos agora as estruturas de controle em javascript!
+
+Estrutura de DECISÃO if else, SE-ENTÃO-SENÃO
+
+Observe a sintaxe abaixo:
+
+if (<expressão lógica>)
+{
+<instruções a serem executadas caso a expressão booleana resulte em VERDADEIRO>
+}
+else
+{
+<instruções a serem executadas caso a expressão booleana resulte em FALSO>
+}
+
+O bloco de código else (SENÃO) é opcional. É comum encontrar instruções de decisão apenas com if, sem o bloco else.
+Chamamos de bloco o espaço que está entre os sinais de { } (abre chave e fecha chave).
+
+Vamos utilizar if else na prática em javascript!
+
+Vejamos um exemplo de utilização desta estrutura com um script.
+Neste script, vamos simular um sistema quando vamos sacar dinheiro. O sistema verifica se o valor que desejamos sacar é menor que o saldo disponível. Assumiremos que há
+R$ 1000 de saldo disponível para o saque. Se o valor que o usuário quer sacar é menor ou igual ao saldo disponível, então o script permite o saque, caso contrário, não.
+
+<script>
+//script "SacarDinheiro"
+var saldoDisponivel;
+var valorDoSaque;
+saldoDisponivel = 1000; //Assumimos que há 1000 reais de saldo na conta disponível para saque
+valorDoSaque = parseFloat(prompt("Digite o valor do saque")); //recebemos o valor digitado, e a função parseFloat converte a string numérica recebida em um número que permite casas decimais
+if(valorDoSaque <= saldoDisponivel)
+{
+saldoDisponivel = saldoDisponivel - valorDoSaque;
+alert("Sacando R$ "+ valorDoSaque+ ".");
+}
+else
+{
+alert("O valor solicitado é maior que o valor disponível para saque!");
+}
+alert("Saldo disponível: R$ "+ saldoDisponivel);
+//fim do script
+</script>
+
+
+Essa é a estrutura de controle de fluxo mais utilizada na criação de programas de computador. Pratique-a criando scripts que tomam decisão.
+
+Estrutura de decisão switch case (ESCOLHA-CASO)
+
+A proposta do ESCOLHA-CASO é  levar o fluxo do programa direto ao bloco de código correto, dependendo do valor de uma variável de verificação.
+Em javascript é o mesmo com o switch case.
+Essa é a sintaxe:
+switch(<variável de verificação>)
+{
+case <valor1>:
+“instruções a serem executadas caso <variável de verificação> = <valor1>”;
+break; //finaliza instruções caso <variável de verificação> = <valor1>”
+case <valor2>:
+“instruções a serem executadas caso <variável de verificação> = <valor2>”;
+break; // finaliza instruções caso <variável de verificação> = <valor2>”
+case <valor3>:
+“instruções a serem executadas caso <variável de verificação> = <valor3>”
+break; // finaliza instruções caso <variável de verificação> = <valor3>”
+
+// FIM-ESCOLHA
+}
+Observe que todos os cases do switch está dentro do seu bloco de execução (o que está entre chaves).
+
+Nada melhor para aprender programação do que praticar bastante! Então vamos ver um exemplo prático da utilização do switch case.
+
+Imagine a seguinte situação:
+Você deseja criar um script para uma calculadora, o usuário digita o primeiro número, a operação que deseja executar e o segundo número. Dependendo do que o usuário informar como operador, o script executará um cálculo diferente (soma, subtração, multiplicação ou divisão).
+Vejamos como seria este script utilizando primeiramente a estrutura if else:
+<script>
+//script "CalculadoraBasicaComIfElse"
+var numero1;
+var numero2;
+var operacao;
+var resultado;
+
+numero1 = parseInt(prompt("Digite o primeiro número: ")); //recebemos o valor digitado e a função parseInt converte a string numérica recebida em um número inteiro
+
+operacao = prompt("Digite a operação: ");
+
+numero2 = parseInt(prompt("Digite o segundo número: "));
+
+if(operacao == "+")
+{
+resultado = numero1 + numero2;
+}
+else
+{
+if(operacao == "-")
+{
+ resultado = numero1 - numero2;
+}
+else
+{
+if(operacao == "*")
+{
+ resultado = numero1 * numero2;
+}
+else
+{
+if(operacao == "/")
+{
+ resultado = numero1 / numero2;
+}
+}
+}
+}
+alert("Resultado: "+ resultado);
+//fim script
+</script>
+Veja como if e else aninhados (um dentro do outro) fica muito confuso, apesar de funcionar tranquilamente.
+Observe que utilizamos duas funções do javascript (parseInt e parseFloat).
+Essas funções converte um valor passado como parâmetro em um número. Quando usamos a função prompt, nós digitamos um texto nela. Então, quando digitamos um número, devemos convertê-lo para o tipo que queremos (int, ou inteiro, float ou real) para podermos efetuar a operação em seguida.
+Como vimos em operadores, o sinal + (mais) além de somar em javascript, ele também serve para concatenar valores. Então, se escolhêssimos a soma em nosso script sem utilizar a função parseInt ou parseFloat, os valores seriam concatenados ao invés de realmente somados.
+Por exemplo:
+digamos que no número 1, digitássimos 10, na operação escolhêssimos + (para somar), e para o número 2 digitássimos 15:
+ao invés do script efetuar a soma 10 + 15 e o resultado ser 25,
+o script iria entender que o 10 é um texto e o 15 também, e o sinal + seria para concatenar os valores, resultando em 1015.
+Como se fosse:
+"10"+"15".
+
+Agora vamos ver como fica o mesmo script utilizando a estrutura switch case:
+<script>
+//script "CalculadoraBasicaComSwitchCase"
+var numero1;
+var numero2;
+var operacao;
+var resultado;
+
+numero1 = parseInt(prompt("Digite o primeiro número: "));
+
+operacao = prompt("Digite a operação: ");
+
+numero2 = parseInt(prompt("Digite o segundo número: "));
+switch(operacao)
+{
+case "+":
+resultado = numero1 + numero2;
+break;
+case "-":
+ resultado = numero1 - numero2;
+break;
+case "*":
+ resultado = numero1 * numero2;
+break;
+case "/":
+ resultado = numero1 / numero2;
+break;
+}
+alert("Resultado: "+ resultado);
+//fim script
+</script>
+
+Agora a lógica ficou mais visível e elegante. O resultado dos dois scripts é o mesmo. Mas o código com o switch case é mais fácil de entender.
+
+CASO NÃO TRATADO NA ESTRUTURA (default, OUTROCASO).
+Além das opções tratadas na estrutura, é possível identificar quando o valor da variável não é equivalente a nenhum valor informado como opção nos case, ou seja, é um default (“OUTRO CASO”).
+No script que fizemos anteriormente, imagine se o usuário digitasse um valor diferente de “+”, “-“, “*” e “/”. Caso quiséssemos apresentar uma mensagem
+para o usuário informando que ele digitou uma opção inválida, utilizaríamos esse recurso da estrutura switch case, veja:
+switch(operacao)
+{
+case "+":
+resultado = numero1 + numero2;
+break;
+case "-":
+ resultado = numero1 - numero2;
+break;
+case "*":
+ resultado = numero1 * numero2;
+break;
+case "/":
+ resultado = numero1 / numero2;
+break;
+default:
+alert("A operação digitada é inválida!");
+break;
+}
+
+Como você pôde observar, em termos de organização de código a estrutura switch case é uma opção muito elegante quando se tem muitos if else  para verificar a mesma variável.
+Facilita a leitura do script e a manutenção do código.
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!

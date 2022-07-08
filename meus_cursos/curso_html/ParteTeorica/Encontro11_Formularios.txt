@@ -1,0 +1,124 @@
+Módulo HTML Acessível
+
+Formulários
+
+Com certeza você já deve ter preenchido algum formulário em suas viagens pela Internet, não?
+Seja para cadastros, pesquisas ou mesmo envio de comentários, os formulários aumentam o poder de interação da Web e são uma forma diferenciada de receber dados dos visitantes de sua página.
+Atualização ou consultas a base de dados, envio de dados por e-mail, ou simplesmente a construção de uma nova página (gerada a partir dos novos dados) são algumas das aplicações mais comuns que conseguimos com uso de formulários.
+
+ELEMENTOS HTML PARA FORMULÁRIOS
+A estrutura de um formulário seria basicamente esta:
+
+<form method="POST" action="pagina-que-vai-receber-os-dados.php" enctype="multipart/form-data">
+<label for="titulo">Título do livro:</label>
+<input type="text" id="titulo" name="titulo">
+<label for="autor">Autor do livro:</label>
+<input type="text" id="autor" name="autor">
+<label for="livro">Anexar livro:</label>
+<input type="file" id="livro" name="livro">
+<input type="submit" name="salvar-livro" value="Salvar novo livro!">
+</form>
+
+O parâmetro ACTION (ação) deve conter o endereço  que vai receber os dados no formulário (escrito em PHP, por exemplo).
+O atributo METHOD (método) define como as informações coletadas no formulário serão enviadas para a URL indicada no atributo ACTION. Ele deve ter os valores GET ou POST, que são dois dos verbos que o protocolo http utiliza.
+O valor mais comum é POST, que envia todas as informações separadamente. O GET envia todos os dados do formulário em uma sequência de caracteres concatenados.
+Para que o arquivo seja enviado é necessário utilizar o valor POST para o atributo method e o atributo enctype com o valor multipart/form-data.
+
+INPUT significa entrada de dados, logo este é um dos elementos que determina como será a entrada de dados nos campos de um formulário.
+Use a tag <input>  para montar caixas de texto, botões e até caixas de verificação de senhas, definindo o tipo de input, ou seja, o tipo de entrada, por meio do atributo type.
+Os atributos mais importantes na tag <input> são:
+type: define o tipo do elemento, texto, botão de escolha, entre outros;
+name: atribui um nome ao campo, para que ele seja indentificado posteriormente;
+value: atribui um valor ao campo, é o que recebe, por exemplo,  o telefone digitado na caixa de texto.
+
+Outros atributos:
+
+id: esse atributo identifica de forma única um elemento (uma tag) no documento html;
+placeholder: em um campo input do tipo text, esse atributo exibe uma dica de preenchimento;
+
+autocomplete: faz com que o navegador exiba dicas de preenchimento em um campo de edição. O navegador pode preencher um nome, cargo, senha, etc. Com o valor "on", indica que o navegador poderá autocompletar o campo. Com o valor "off", indica que o navegador não possui essa permissão.
+
+Outros valores para o atributo type:
+type="text", usado para campos de texto para receber nome de uma pessoa, por exemplo:
+<input type="text" name="nome-que-indentifica-esta-caixinha-de-texto">
+type="password", recebe uma senha e não exibe o que foi digitado, exibe símbulo como o asterisco, no lugar das letras:
+<input type="password" name="nome-que-indentifica-este-campo-de-senha">
+type="radio", campo para escolher somente uma opção dentre as exibidas, como por exemplo sexo masculino ou feminino:
+
+<input type="radio" name="sexo" value="f">Feminino
+<input type="radio" name="sexo" value="m">Masculino
+Obs.: no tipo radio, o atributo name deve receber o mesmo valor do grupo de opções, que é sexo nesse caso. O que difere cada opção é o atributo value, para posteriormente sabermos dentre as alternativas do grupo sexo, qual foi o valor escolhido, f ou m?
+
+type="checkbox", campo que nos permite escolher mais de uma opção em um grupo de opções. Como se perguntássemos:
+De quais gêneros literários você gosta?
+<input type="checkbox" name="genero" value="a">Aventura
+<input type="checkbox" name="genero" value="r">Romance
+<input type="checkbox" name="genero" value="f">Ficção
+Obs.: no campo checkbox, usuário poderá marcar nenhuma opção, ou selecionar as 3.
+
+type="file", utilizado para que possamos enviar um arquivo para o servidor, abre a janela para selecionar um arquivo no computador:
+<input type="file" name="nome-que-indentifica-este-campo-para-saber-qual-arquivo-foi-enviado">
+Obs.: o atributo name serve para conseguirmos indentificar e receber o arquivo escolhido pelo usuário.
+
+type="reset", utilizado para limpar (apagar) todos os campos que foram preenchidos no formulário:
+<input type="reset" value="Apagar todos os campos">
+
+type="submit", botão para enviar os dados preenchidos no formulário, submeter os dados ao servidor, enviar para o endereço definido no atributo action do formulário:
+<input type="submit" name="nome-para-indentificar-este-botao-que-envia-os-dados" value="Enviar dados do formulário!">
+
+Algumas outras opções que surgiram no HTML5 são:
+type="email": Um campo para editar um endereço de e-mail. O valor do campo é validado para estar vazio ou ter um único endereço de e-mail válido antes de ser enviado.
+type="number": Um controle para inserir um número de ponto flutuante.
+type="search": Um campo de texto com uma só linha para digitar termos de busca; quebras de linha são automaticamente removidas do valor entrado.
+type="tel": Um controle para inserir um número de telefone; quebras de linha são automaticamente removidas do valor entrado.
+type="url": Um campo para editar uma URL. O valor inserido é validado para ser vazio ou uma URL absoluta válida antes de ser enviado. Quebras de linha e espaços em branco antes e após o valor inserido são automaticamente removidos.
+type="date": Um controle para inserir uma data (ano, mês e dia, sem horário).
+
+Além da tag <input> existem outras, como por exemplo as que seguem:
+
+Tag <label>, usada para indicar o rótulo do campo vinculado.
+
+O campo é vinculado ao rótulo da tag <label> colocando o valor do atributo for no atributo id do campo pretendido:
+
+<label for="nome-do-autor">Informe o nome do autor no campo abaixo:</label>
+<input type="text" id="nome-do-autor" name="nome-do-autor">
+Obs.: repare que o atributo id e o atributo for possuem o mesmo valor, porque assim o navegador consegue saber que os dois estão vinculados, o que é muito bom para acessibilidade com leitores de telas, já que o leitor de tela também consegue saber que o rótulo está vinculado a um determinado campo.
+Podemos colocar o id em qualquer outro elemento para identificá-lo, lenbrando que o valor do atributo 'id' deve ser único em toda a página, ou seja, não pode haver dois 'id's com o mesmo valor.
+
+Tag <select>, usada para exibir uma lista de opções para o usuário escolher, como a que vemos para escolher o estado que moramos ou a cidade que vivemos.
+<option>, é cada opção dentro da tag <select>:
+Podemos fazer assim:
+
+Em qual estado você mora?
+<select name="estados">
+<option value="mg">Minas Gerais</option>
+<option value="df">Distrito Federal</option>
+<option value="sp">São Paulo</option>
+</select>
+Obs.: o atributo name na tag <select> define o nome pelo qual identificaremos esta lista de seleção de estado. O atributo value da tag <option>, é o que nos permite indentificar qual item da lista de estados foi o que o usuário selecionou.
+
+Tag <textarea>, campo de área de texto, permite definir um campo de texto com várias linhas. Ele é útil para colher comentários e mensagens de contato:
+<textarea name="nome-que-indentifica-esta-caixa-de-texto" rows="10" cols="10"></textarea>
+O atributo rows define o número de linhas da caixa de texto, e o atributo cols define quantos caracteres (colunas) cada linha possui. Já o  atributo name, define o nome pelo qual identificaremos a caixa de texto.
+
+Agrupando dados:
+
+A tag <fieldset> nos ajuda a agrupar elementos em um formulário para que a informação fique semanticamente correta e também tecnologias assistivas como leitores de telas informe o rótulo do grupo de elementos.
+
+A tag <legend> deve ficar dentro da tag <fieldset> e serve como seu rótulo.
+
+Por exemplo:
+
+<fieldset>
+<legend>Informe seu sexo:</legend>
+<label for="sf">Feminino</label>
+<input type="radio" name="sexo" id="sf" value="f">
+<br>
+
+<label for="sm">Masculino</label>
+<input type="radio" name="sexo" id="sm" value="m">
+</fieldset>
+
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!

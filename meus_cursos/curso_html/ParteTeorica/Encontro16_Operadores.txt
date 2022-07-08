@@ -1,0 +1,124 @@
+Módulo - JavaScript
+
+Operadores
+
+Veremos os operadores, agora em javascript!
+
+Aritméticos:
+O javascript possui os seguintes operadores:
++ para soma;
+- para subtração;
+* para multiplicação;
+/ para divisão;
+% para o resto (mode).
+
+Como na matemática, as operações em javascript seguem uma ordem. Existe uma ordem de precedência entre estes operadores:
+Primeiro: ( ) - Parênteses.
+Segundo: *(multiplicação) ou /(divisão), o que aparecer primeiro.
+Terceiro: +(soma) ou -(subtração), o que aparecer primeiro.
+
+Exemplo:
+<script>
+var resultadoExpressao;
+resultadoExpressao = 5 + 2 * 3;
+alert("O resultado da expressão acima foi: "+resultadoExpressao);
+</script>
+O script acima exibiria na tela:
+O resultado da expressão acima foi: 11
+
+Agora com os parênteses:
+<script>
+var expressao;
+expressao = (5 + 2) * 3;
+alert("O resultado dessa expressão foi: "+expressao);
+</script>
+A saída desse script será:
+O resultado dessa expressão foi: 21
+Nesse caso resolvemos o que estava entre parênteses primeiro.
+
+Devemos ter atenção no javascript, pois o sinal + (para efetuar soma) também serve para concatenar (juntar) strings.
+Por exemplo:
+Digamos que queremos declarar duas variáveis de texto (strings) diferentes:
+var nome = "Juliano";
+Var mensagem = "Seja bem-vindo, ";
+Para colocarmos as duas na tela, podemos concatená-las:
+var mensagemCompleta = mensagem+nome;
+alert(mensagemCompleta);
+A saída será: 
+Seja bem-vindo, Juliano
+
+Isso ocorre porque o sinal de + foi utilizado para concatenar as strings e não para somar dois números.
+Foi o mesmo que:
+"Seja bem-vindo " + "Juliano", Juntando os dois textos em um.
+
+Operadores relacionais
+Os operadores relacionais são utilizados para comparar dois valores, que podem ser variáveis ou constantes, do mesmo tipo.
+São exemplos de operadores relacionais, no javascript:
+== (igual a)
+São dois sinais de =(igual), porque somente um, é para atribuir um valor a uma variável:
+var nome = "Maria"; // a variável nome recebe o valor de texto Maria.
+var comparacao = nome == "Maria";
+A variável comparacao vai receber o resultado verdadeiro ou falso:
+se a variável nome contiver o mesmo texto "Maria" então é verdadeiro, se não é falso.
+Nesse caso a variável comparacao recebe true (verdadeiro), porque de fato, ela contém o valor "Maria".
+
+!= (diferente de)
+Note que no javascript o sinal para diferente é com != (exclamação mais igual).
+o sinal !(exclamação) sozinho, significa uma negação, não.
+Então != quer dizer (não igual), ou seja, diferente.
+Assim, continuando com o exemplo anterior:
+var nome = "Maria"; // a variável nome recebe o valor de texto Maria.
+var comparacao = nome != "Maria";
+Nesse caso, a variável comparacao receberá o valor false(falso), porque nome não é diferente de "Maria", é igual.
+
+Continuando com os ooperadores relacionais:
+> (maior que)
+< (menor que)
+>= (maior ou igual a)
+<= (menor ou igual a)
+
+Esses operadores são muito utilizados. Com o resultado destas comparações implica num valor lógico/booleano (verdadeiro ou falso, true ou false, no inglês):
+10 >= 5 (verdadeiro, true)
+11 != 11 (falso, false)
+0.5 < (-1) (falso, false)
+A==A (verdadeiro, true)
+
+Operadores Lógicos
+
+Enquanto os operadores aritméticos trabalham com números, os operadores lógicos trabalham com dados lógicos, ou booleanos​.
+A ideia dos operadores em javascript continua a mesma: Relacionar valores para resultar um outro valor. Isso significa que os operadores lógicos relacionam valores lógicos (verdadeiro/falso, 1/0, aceso/apagado, ligado/desligado, true/false, sim/não, etc.)
+e o resultado de uma expressão lógica também é outro valor lógico.
+Os operadores lógicos principais são:
+
+&& - conjunção
+|| - disjunção
+! - negação
+
+O “&&” e o “||” são operadores binários. Isso quer dizer que eles servem para combinar duas expressões.
+O “!” é um operador unário. Isso quer dizer que ele serve para alterar o valor de uma expressão.
+
+1. Quando usamos o operador lógico &&, O resultado só é verdadeiro se as duas expressões forem verdadeiras. Caso contrário o resultado é falso.
+2. Quando usamos o operador lógico ||, o resultado será verdadeiro se pelo menos uma das duas expressões for verdadeira. Se as duas forem falsas, o resultado também será falso.
+3. Quando usamos o operador lógico !, o valor se inverte: se era verdadeiro se torna falso, se era falso se torna verdadeiro.
+
+Exemplo:
+var nome = "Maria";
+var idade = 23;
+var dados = nome=="Maria" && idade==22;
+alert(dados);
+Nesse caso exibiria na tela: falso.
+Agora:
+var nome = "Maria";
+var idade = 23;
+var dados = nome=="Maria" || idade==22;
+alert(dados);
+Nesse outro caso exibiria na tela: verdadeiro.
+
+Em javascript, os operadores lógicos também seguem uma ordem de precedência (prioridade):
+Primeiro: ( ) - Parênteses.
+Segundo: ! - Negação.
+Terceiro: && - Conjunção.
+Quarto: || - Disjunção.
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!

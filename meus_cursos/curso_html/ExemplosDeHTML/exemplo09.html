@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Exemplo 09 de HTML Acessível</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+  <div role="banner" id="introducao">
+    <figure>
+      <img src="LendoAprendendoCoracao.png" alt="Livro aberto" width="135" height="75">
+      <figcaption>Um livro aberto com suas páginas
+        formando um coração.</figcaption>
+    </figure>
+
+    <div role="navigation">
+      <ul>
+        <li><a title="Abrirá em uma nova página" href="exemplo01.html">Exemplo 1</a></li>
+        <li><a href="exemplo02.html">Exemplo 2</a></li>
+        <li><a href="exemplo03.html">Exemplo 3</a></li>
+        <li><a href="exemplo04.html">Exemplo 4</a></li>
+        <li><a href="exemplo05.html">Exemplo 5</a></li>
+        <li><a href="exemplo06.html">Exemplo 6</a></li>
+        <li><a href="exemplo07.html">Exemplo 7</a></li>
+      </ul>
+    </div>
+
+    <div role="main" id="conteudo-principal">
+      <h1 id="titulo-de-introducao">Seja bem-vindo(a) ao nosso nono exemplo de HTML acessível</h1>
+      <p style="color: #FFFFFF;">Hoje vamos aprender sobre <span class="destaque">WAI-ARIA e CSS</span>.</p>
+      <section aria-labelledby="ex-form">
+        <h2 id="ex-form">Exemplo de formulário</h2>
+        <form method="GET" action="cadastro.php">
+          <fieldset>
+            <legend>Dados pessoais</legend>
+            <label for="nome">Digite seu nome completo: </label>
+            <input type="text" name="txt-nome" id="nome">
+            <label for="email">Informe seu e-mail: </label>
+            <input type="email" name="txt-email" id="email">
+            <label for="telefone">Informe seu número de telefone</label>
+            <input type="tel" name="telefone" id="telefone">
+          </fieldset>
+          <fieldset>
+            <legend>Dados da mensagem</legend>
+            <label for="assunto">Informe o assunto da mensagem:</label>
+            <input type="text" name="assunto" id="assunto">
+            <label for="mensagem">Escreva sua mensagem:</label>
+            <textarea cols="100" rows="100" name="mensagem" id="mensagem"></textarea>
+          </fieldset>
+          <fieldset>
+            <legend>Dados de endereço</legend>
+            <label for="estados">Selecione seu estado:</label>
+            <select name="estados" id="estados">
+              <option value="mg">Minas Gerais</option>
+              <option value="sp">São Paulo</option>
+
+
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Selecione seu sexo:</legend>
+            <input type="radio" name="sexo" value="f" id="feminino">
+            <label for="feminino">Feminino</label>
+
+            <input type="radio" name="sexo" value="m" id="masculino">
+            <label for="masculino">Masculino</label>
+          </fieldset>
+
+
+          <button type="submit" name="btn-enviar">Enviar dados</button>
+        </form>
+      </section>
+    </div>
+    <div aria-label="Rodapé" role="contentinfo" id="rodape">
+      <p>Curso Desenvolvendo - Todos os direitos reservados</p>
+
+    </div>
+
+</body>
+
+</html>

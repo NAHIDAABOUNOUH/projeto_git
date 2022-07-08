@@ -1,0 +1,105 @@
+Módulo HTML
+
+Sintaxe do HTML
+
+O HTML é um conjunto de tags responsáveis pela marcação do conteúdo de uma página no navegador.
+Muitas tags são disponibilizadas pela linguagem HTML e cada uma possui uma funcionalidade específica.
+A tag é formada pelo sinal de < (menor que), o nome da tag, e o sinal de > (maior que):
+Para informar que a tag será fechada, uma / (barra) é inserida logo após o sinal de < (menor que):
+Abrindo tag:
+<nomedatag>
+Tudo que estiver aqui, dentro dela, receberá suas características.
+Fechando a tag:
+</nomedatag>
+
+Estrutura básica de um documento HTML
+
+<!-- tag html, informa ao navegador a linguagem que será utilizada -->
+<html>
+<!-- tag head, passa algumas instruções para o navegador, o conteúdo dentro dela não é exibido para o usuário -->
+<head>
+<!-- abre e fecha a tag title, informando o título do documento ao navegador -->
+<title>Meu título</title>
+<!-- fecha tag head, fim das instruções ao navegador -->
+</head>
+<!-- abre tag body, inicia o corpo da página, todo o conteúdo para o usuário deverá estar dentro dela -->
+<body>
+<!-- tag h1, insere um título, um cabeçalho de nível 1 na página -->
+<h1>Título nível 1</h1>
+<!-- tag h2, insere um subtítulo, um cabeçalho de nível dois, os níveis podem ir até o 6 -->
+<h2>Sub-Título nível 2</h2>
+<!-- tag p, insere um parágrafo na página -->
+<p>Este é um parágrafo</p>
+<!-- fecha a tag body, finalizando o conteúdo da página -->
+</body>
+<!-- fecha a tag html, encerrando a página -->
+</html>
+
+Instrução DOCTYPE
+
+Para chegarmos neste ponto, passamos por várias versões do html. O navegador precisa saber qual versão queremos renderizar a página, para isso usamos a instrução DOCTYPE.
+Como padrão, dizemos ao navegador para utilizar a versão mais atual do html com o seguinte comando:
+<!DOCTYPE html>
+Colocamos essa instrução antes mesmo de abrir a tag html, fica bem no topo, para ser a primeira instrução que o browser receberá.
+Não é uma tag, não precisa ser fechada. É uma instrução especial.
+
+Atributos
+
+Algumas tags podem receber atributos dentro de sua definição. São parâmetros usando a seguinte sintaxe:
+nomeDoAtributo="seuValor".
+
+Como exemplo temos o idioma que a página será exibida: <html lang="pt-BR">
+E também temos Charset para codificação de caracteres: <meta charset="utf-8">
+Obs.: a tag <meta> não tem fechamento e a colocamos dentro da tag <head>.
+
+ÊNFASE
+
+Quando queremos dar uma ênfase diferente a um trecho de texto, podemos utilizar as marcações de ênfase:
+Texto “mais forte” com a tag <strong>: fica em negrito
+Texto com uma “ênfase acentuada” com a tag <em>: fica com letra em itálico
+Texto menor com a tag <small>.
+Obs.: como vimos em aula, muito mais que o efeito visual dessas tags, o que devemos levar em consideração é o peso semântico que elas proporcionam.
+
+Listas HTML
+
+Existem basicamente 3 tipos de listas no html, isto é, tags que utilizamos quando precisamos realizar uma listagem de itens.
+
+Lista não ordenada:
+essa lista exibe um marcador no início de cada item de lista (o leitor de telas pode dizer "bolinha", "marcador" ou algo semelhante).
+
+<ul>
+
+<li>Primeiro item da lista</li>
+<li>Segundo item da lista</li>
+<li>Terceiro item da lista</li>
+
+</ul>
+
+Lista ordenada:
+essa lista exibe um número indicando a ordem de cada item na lista.
+
+<ol>
+
+<li>Primeiro item da lista</li>
+<li>Segundo item da lista</li>
+<li>Terceiro item da lista</li>
+
+</ol>
+
+lista de definição:
+essa lista serve para listar termos e seus significados, como por exemplo:
+
+<dl>
+<dt>HTML</dt>
+<dd>
+HTML é a linguagem de marcação de textos utilizada
+para exibir textos como páginas na Internet.
+</dd>
+<dt>Navegador</dt>
+<dd>
+Navegador é o software que requisita um documento HTML através do protocolo HTTP e exibe seu conteúdo em uma janela.
+</dd>
+</dl>
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!

@@ -1,0 +1,105 @@
+Módulo HTML Acessível
+
+HTML 5 e Semântica
+
+Utilizamos o html para estruturar um documento, porém, é preciso expressar da melhor forma possível o significado dos conteúdos por meio das tags para que usuários não visuais como motores de buscas, leitores de telas entre outros, consigam realmente compreendê-los.
+Para isso serve a semântica no html, isto é, tags que por si só conseguem transmitir o significado do conteúdo que elas contém, para que a estrutura de fato se torne mais clara tanto para engines quanto para outros programadores.
+
+Então veremos algumas das principais tags semânticas incorporadas à linguagem HTML.
+
+header
+O <header> é utilizado para representar o cabeçalho de um documento ou seção declarada no HTML. Nele podemos inserir outras tags, como para inserir títulos, links, imagens listas de navegação etc.
+Exemplo:
+
+<header>
+<h1>Título desta página</h1>
+<h2>Subtítulo da página</h2>
+</header>
+
+main
+O elemento <main> especifica o conteúdo principal dentro da página. Essa página  deverá conter somente uma tag <main>, além de seu conteúdo ser único no documento.
+Exemplo:
+<main>
+<h2>Estante de livros</h2>
+<p>O livro que você procura está aqui</p>
+<article>
+<h3>Categoria aventura</h3>
+<p>Separamos aqueles livros mais emocionantes para você.</p>
+</article>
+</main>
+
+footer
+A tag <footer> representa um rodapé de um documento, uma área presente no final de uma página web.
+Exemplo:
+<footer>
+<h3>Siga-nos nas redes sociais</h3>
+<ul>
+<li><a href="#">Facebook</a></li>
+<li><a href="#">Instagran</a></li>
+</ul>
+<p>Copyright; todos os direitos reservados</p>
+</footer>
+
+section
+O elemento <section> representa uma seção dentro de um documento e geralmente possui um título.
+
+Exemplo:
+<section>
+<h3>Seção de vendas</h3>
+<p>Veja nossos produtos</p>
+</section>
+
+article
+a tag <article> pode ser usada quando precisamos declarar um conteúdo que não precisa de outro para fazer sentido em um documento HTML, como um artigo em algum blog. É recomendado identificar cada <article> com um título.
+
+Exemplo:
+<article>
+<h3>Título do primeiro artigo</h3>
+<p>Fale sobre seu artigo</p>
+</article>              
+<article>
+<h3>Título do segundo artigo</h3>
+<p>Fale sobre este artigo</p>
+</article>
+
+nav
+O elemento <nav> é utilizado quando precisamos representar um agrupamento de links de navegação, que, são criados com uma lista não ordenada com as tags <ul>, <li> e a tag de âncora <a>.
+Exemplo:
+<nav>
+<ul>       
+<li><a href="#">pagina 1</a></li>
+<li><a href="#">pagina 2</a></li>
+<li><a href="#">pagina 3</a></li>
+<li><a href="#">pagina 4</a></li>
+</ul>
+</nav>
+
+aside
+A tag <aside> é utilizada quando precisamos criar um conteúdo que complementa o conteúdo principal.
+Exemplo:
+
+<aside>
+<nav>
+<ul>
+<li>Link complementar 1</li>
+<li>Link complementar  2</li>
+<li>Outro link complementar</li>
+</ul>
+</nav>
+</aside>
+
+figure
+A tag <figure> insere uma figura (imagem) no documento, e conta com a tag <figcaption> para a sua respectiva descrição.
+Exemplo:
+<figure>
+<img src="minha-imagem.jpg" alt="Descrição da minha imagem">
+</figure>
+
+Exemplo de <figure> com <figcaption>:
+<figure>
+<img src="minha-outra-imagem.jpg" alt="Breve descrição da imagem">
+<figcaption>Legenda da imagem</figcaption>
+</figure>
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!

@@ -1,0 +1,135 @@
+Curso Desenvolvendo - Introdução à Programação de Sistemas com HTML, Lógica de Programação e JavaScript.
+Módulo HTML
+
+Introdução
+
+Neste módulo apresentaremos a linguagem utilizada na definição de páginas na Internet. Com o HTML (Hyper Text Markup Language) é possível criar páginas incríveis, conforme a criatividade de cada um. Além disso, você aprenderá a respeito da World Wide Web, dos browsers e das homepages.
+
+O que são Redes?
+
+Uma rede é a conexão entre dois ou mais computadores.
+Através da rede, os computadores podem compartilhar periféricos, informações e programas. Uma impressora, por exemplo, pode
+ser utilizada por vários equipamentos ao mesmo tempo, reduzindo assim os custos.
+Os provedores da Internet são um exemplo de rede, constituída pela interligação entre computadores e um servidor central, através de uma linha telefônica.
+
+Provedores de Acesso
+Os Provedores de Acesso são empresas que mantêm computadores conectados de forma permanente à Internet. O provedor faz um investimento em linhas telefônicas, computadores, software e na própria conexão permanente com a Internet. Depois
+provê acesso à Internet aos usuários.
+
+Internet
+
+A Internet é uma rede composta por milhões de redes
+interconectadas mundialmente, compreendendo redes comerciais, acadêmicas, governamentais e militares. Cada rede individual conectada à Internet pode ser administrada por uma
+entidade governamental, uma empresa ou uma instituição educacional. Mas a Internet, como um todo, não tem um poder centralizado, ou seja, ninguém é dono da Internet.
+
+Como surgiu a Internet?
+
+A Internet surgiu em 1969. Vivia-se o auge da guerra fria e os laboratórios militares americanos sentiam a necessidade de compartilhar de forma segura informações sigilosas, armazenadas em computadores espalhados pelo país. Foi criada então uma rede de comunicação interligando esses computadores, mais tarde conhecida como ARPANET. Para evitar
+que um ataque nuclear soviético interrompesse essa comunicação, desenvolveram um esquema para a transmissão em que as informações seriam divididas em pacotes. Esses
+pacotes tomariam caminhos diferentes para chegar ao mesmo local. Caso um trecho de comunicação fosse destruído, os pacotes
+pegariam outro caminho e chegariam ao mesmo destino.
+No entanto, para entrar na ARPANET, uma universidade precisava ter um contrato de pesquisa com
+o Departamento de Defesa dos EUA, privilégio que muitas não tinham.
+Então começaram a desenvolver uma sucessora para a ARPANET, que seria aberta a todos os grupos de pesquisa universitários.
+Em meados da década de 1980, as pessoas começaram a ver um conjunto de redes como uma
+inter-rede e, mais tarde, como a Internet.
+
+Endereço IP
+
+Como tantos computadores conseguem se comunicar uns com os outros?
+
+Cada um consegue ser exclusivo, porque cada um tem seu próprio endereço.
+Os endereços IP (Internet Protocol/Protocolo Internet) são formados por números. São valores únicos e cada um indica um computador na Internet.
+Ex: 200.225.162.12
+
+Domínio
+
+Se um número for muito extenso teremos dificuldade em memorizá-lo. A partir dessa dificuldade, os idealizadores da Internet
+criaram o conceito de “Domínio”. Domínio é uma tabela na qual cada endereço IP é associado a um nome. Dessa forma, a
+pessoa não precisa ficar preocupada se não lembrar do endereço de um determinado site, basta mandar o navegador ou browser procurar pelo domínio.
+Durante a década de 1980, novas redes foram conectadas.
+À medida que a escala aumentou, tornou-se cada vez mais dispendioso localizar os computadores, e assim foi
+criado o DNS (Domain Naming System), cujo objetivo era organizar máquinas em domínios e mapear nomes de hosts em endereços IP. Desde então, o DNS se transformou em um sistema
+generalizado de bancos de dados distribuídos, capaz de armazenar uma série de informações
+referentes à atribuição de nomes.
+
+Existem algumas regras para a atribuição de domínios, como o uso de letras minúsculas, a proibição de sinais gráficos como +, - ou * e a extensão final, que deve refletir o caráter da instituição.
+Temos as seguintes extensões:
+.mil Organizações Militares
+.gov Organizações Governamentais
+.com Empreendimentos Comerciais ou Pessoais
+.edu Instituições de Ensino
+.net Redes Mundiais
+.org ONGs e semelhantes
+
+Quem coordena os DNS?
+
+A Sociedade Internet para a Atribuição de Nomes e Números (ICANN, Internet Corporation for Assigned Names and Numbers) é responsável pela gestão e coordenação do Sistema de Nomes de Domínio (DNS)
+para assegurar que cada endereço é exclusivo e que todos os utilizadores da Internet conseguem encontrar todos os endereços válidos.
+É a entidade que superintende na distribuição de endereços IP e de nomes de domínio. Assegura ainda a correlação de cada nome de domínio com o endereço IP correto.
+
+Em todos os países, com exceção dos EUA, ficou definido que os domínios da Internet terminam com a sigla do país em que está localizado. Assim, google.com.br é diferente de google.com.
+
+WWW
+A World Wide Web (WWW) é a parte mais popular da Internet. Devido à sua facilidade de uso, logo se espalhou pelo mundo. A “Grande Teia Mundial” (World Wide Web) é formada por um
+conjunto sempre crescente de computadores. O que diferencia de uma rede convencional é o fato das informações estarem
+conectadas umas às outras, formando o conceito de hipertexto.
+
+O que são Browsers?
+
+A ferramenta básica para a exibição de documentos na WWW são os browsers, ou como são conhecidos, os “navegadores”.
+Com o passar do tempo os browsers foram ficando cada vez mais sofisticados, com inclusão de imagens, novos métodos de
+formatação de texto, reconhecimento de novos formatos de dados, capacidade de comunicação por voz via Internet, e recepção de vídeo e áudio.
+Há dezenas de browsers diferentes, como exemplo  temos o Mozilla Firefox, Internet Explorer, Google Chrome, etc.
+
+Protocolo HTTP
+
+Os protocolos são “línguas” usadas entre o computador que acessa a informação e o que a transmite. É uma forma de padronizar os processos; assim evita-se que cada programa use uma linguagem diferente.
+O HTTP, isto é, o Hiper Text Transfer Protocol, Protocolo de Transferência de Hipertexto, é a linguagem usada na WWW. Através dele, qualquer browser pode se comunicar com qualquer servidor, independente dos fabricantes dos softwares envolvidos.
+Os browsers mais modernos são compatíveis com vários tipos de protocolo, além do HTTP. Entre eles está o FTP, de File Transfer Protocol. É um método prático de ter acesso a arquivos em servidores de todo o mundo.
+
+URL
+
+URL significa Universal Resource Locator ou Localizador Universal de Recursos. A URL é um conjunto de informações que
+descreve um recurso qualquer na Internet, seja e-mail, FTP ou WWW. Assim, os programas sabem que protocolos devem utilizar
+e podem também orientar o usuário, quando o recurso solicitado estiver além das possibilidades do programa. Veja abaixo, exemplos de algumas URLs válidas:
+
+http://sitedelivros.com/categoria-aventura
+ftp://ftp.abcd.com.br
+mailto:contatositedelivros@gmail.com
+
+UmaURL tem três partes:
+o nome do protocolo (por exemplo http);
+o nome DNS da máquina em que a página está localizada (www.abcd.com);
+e (normalmente) o nome do arquivo que contém a página (products.html).
+
+Páginas Web
+Páginas Web ou documentos HTML ou mesmo páginas na Internet são documentos localizados em um servidor específico,
+mas acessíveis mundialmente, através da Internet. As páginas
+podem ser simples, com algumas linhas de texto, ou ter milhares de páginas num único site. A publicação de uma página, ao contrário do que se pensa, não é complicada, tampouco dispendiosa.
+Em uma página pessoal, você pode disponibilizar o que quiser: seus poemas, fotos do seu gato de estimação, desenhos dos filhos, comentários sobre o seu trabalho, etc.. O limite é sua imaginação e o espaço em disco.
+
+Home Page
+Home Page é a página inicial ou a página de entrada de um site.
+
+O que é HTML?
+HTML é a abreviação das palavras: HyperText Markup Language, que pode ser traduzido como Linguagem de Marcação de Hipertexto. Não é uma linguagem de programação. É uma linguagem de descrição/marcação de página.
+Hipertexto é um método de organização que permite que textos, imagens, sons e ações fiquem interligados.
+
+O que você pode fazer com o HTML?
+
+A função do HTML é criar páginas na Internet. Você pode criar textos nas páginas, fazer formatação, criar listas, criar tabelas, criar formulários, trabalhar com imagens, etc..
+O HTML cria páginas estáticas, sem animação.
+
+O que é necessário para trabalhar com HTML?
+
+Você irá precisar de:
+
+1. Um editor de textos qualquer;
+2. E um browser (navegador) Mozilla Firefox, Google Chrome.
+
+Os arquivos devem ser salvos no formato texto puro (.txt) e sua extensão deve ser alterada para .html.
+
+
+Mantenha isso em mente!
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!
