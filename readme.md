@@ -1,2 +1,3 @@
 Olá!
-Este projeto ensina você a usar o git.
+
+Projeto contendo exemplos básicos de html e javascript e textos explicativos de como construí-los.
