@@ -1,0 +1,83 @@
+Módulo - JavaScript
+
+Funções e eventos
+
+O uso do JavaScript como a principal linguagem de programação da Web só é possível por conta da integração
+que o navegador oferece para o programador, a maneira com que conseguimos encontrar um elemento da
+página e alterar alguma característica dele pelo código JavaScript:
+Se temos uma tag h1:
+<h1 id="titulo">Título da minha página</h1>
+
+No javascript podemos selecionar essa tag e mudar o seu texto assim:
+var titulo = document.getElementById("titulo");
+titulo.textContent = "O texto do elemento mudou para esse novo texto!";
+
+No exemplo anterior, nós selecionamos um elemento do documento pelo valor do seu atributo id e alteramos sua propriedade textContent. Existem diversas maneiras de selecionarmos elementos de um documento e de alterarmos suas propriedades.
+
+Apesar de ser interessante a possibilidade de alterar o documento todo por meio do JavaScript, existe um problema com a característica de execução imediata do código. O mais comum é que as alterações sejam
+feitas quando o usuário executa alguma ação, como por exemplo, clicar em um elemento.
+Para suprir essa necessidade, é necessário utilizar de dois recursos do JavaScript no navegador. O primeiro é
+a a criação de funções:
+function exibirAlerta() {
+alert("Olá pessoal!");
+}
+
+Ao criarmos uma função, a execução do código simplesmente guarda o que estiver dentro da função, e esse
+código guardado só será executado quando chamarmos a função. Para exemplificar a necessidade citada
+acima, vamos utilizar o segundo recurso, os eventos:
+
+// obtendo um elemento através de um seletor de ID
+Se em sua página HTML você tem um botão com rótulo "Exibir mensagem" e id "btn-msg":
+<button id="btn-msg">Exibir mensagem</button>
+Então você poderá recuperá-lo e utilizar o evento de clique, conforme o seguinte:
+
+var meuBotao = document.getElementById("btn-msg");
+meuBotao.onclick = exibirAlerta;
+
+Note que primeiramente é necessário selecionar um elemento do documento e depois definir o onclick desse
+elemento como sendo a função.
+De acordo com os dois códigos acima, primeiramente guardamos um comportamento em uma função. Ao
+contrário do código fora de uma função, o comportamento não é executado imediatamente, e sim guardado
+para quando quisermos chamá-lo. Depois informamos que um elemento deve executar aquele comportamento em determinado momento, no caso em um evento “click”.
+Também é possível chamar uma função em um momento sem a necessidade de um evento, é só utilizar o
+nome da função abrindo e fechando parênteses, indicando que estamos executando a função que foi definida anteriormente:
+function exibirAlerta() {
+alert("Olá pessoal!");
+}
+// Chamando a função:
+exibirAlerta();
+
+Também é possível determinar, por meio de seus argumentos, que a função vai ter algum valor variável que
+vamos definir quando quisermos executá-la:
+function exibirAlerta(texto) {
+// Dentro da variável texto conterá o valor passado na execução.
+alert(texto);
+}
+// Ao chamar a função é necessário definir o valor do "texto"
+exibirAlerta("Olá pessoal, agora este texto é o argumento da função!");
+
+Existem diversos eventos que podem ser utilizados para que a interação do usuário com a página seja o ponto de disparo de funções que alteram os elementos da própria página:
+onclick: clica com o mouse
+ondblclick: clica duas vezes com o mouse
+onmousemove: mexe o mouse
+onmousedown: aperta o botão do mouse
+onmouseup: solta o botão do mouse (útil com os dois acima para gerenciar drag’n’drop)
+onkeypress: ao pressionar e soltar uma tecla
+onkeydown: ao pressionar uma tecla.
+onkeyup: ao soltar uma tecla. Mesmo acima.
+onblur: quando um elemento perde foco
+onfocus: quando um elemento ganha foco
+onchange: quando um input, select ou textarea tem seu valor alterado
+onload: quando a página é carregada
+onbeforeunload: antes da página se fechar
+onunload: quando a página é fechada
+onsubmit: disparado antes de submeter o formulário. Útil para realizar validações.
+
+
+Conclusão
+
+Vimos como podemos fazer diversas coisas com javascript, utilizando a combinação de funções e eventos.
+Agora é só exercitar sua criatividade!
+
+Pratique tudo isso,
+E não se esqueça: Independentemente de qualquer coisa, continue desenvolvendo!
